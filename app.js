@@ -39,3 +39,11 @@ function showModalHandler(){
 
   document.body.append(backdrop);
 }
+
+function closeModalHandler() {
+    modal.remove();
+    modal = null;
+  
+    backdrop.remove();
+    backdrop = null;
+  }
