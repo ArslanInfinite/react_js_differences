@@ -1,6 +1,7 @@
 const button = document.querySelector('button');
 
 let modal;
+let backdrop;
 
 button.addEventListener('click', showModalHandler);
 
@@ -30,5 +31,11 @@ function showModalHandler(){
   modal.append(modalConfirmAction);
 
   document.body.append(modal);
-  
+
+  backdrop = document.createElement('div');
+  backdrop.className = 'backdrop';
+
+  backdrop.addEventListener('click', closeModalHandler);
+
+  document.body.append(backdrop);
 }
